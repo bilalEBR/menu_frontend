@@ -1,7 +1,10 @@
 import Image from "next/image";
 
-export default function Home() {
+
+export default function Jom() {
   return (
+
+ 
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
@@ -21,7 +24,7 @@ export default function Home() {
             .
           </li>
           <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
+            Save and see your changes instantly. don't worry
           </li>
         </ol>
 
@@ -35,7 +38,7 @@ export default function Home() {
             <Image
               className="dark:invert"
               src="/vercel.svg"
-              alt="Vercel logomark"
+              alt="Vercel logo mark"
               width={20}
               height={20}
             />
@@ -60,10 +63,10 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/file.svg"
+            src="/menu_logo.jpg"
             alt="File icon"
-            width={16}
-            height={16}
+            width={100}
+            height={100}
           />
           Learn
         </a>
