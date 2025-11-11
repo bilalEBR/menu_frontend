@@ -5,7 +5,7 @@ import Link from 'next/link';
 import SecureLogoutButton from '@/app/components/admin/SecureLogOutButton';
 
 // API Configuration
-const API_BASE_URL = 'http://localhost:8000/api'; 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 // CRITICAL FIX: Simulated router replacement for environment compatibility 
 // This ensures the component is runnable outside a full Next.js setup.

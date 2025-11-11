@@ -5,7 +5,7 @@ import AdminSidebar from '../components/admin/AdminSideBar';
 import AdminHeader from '../components/admin/AdminHeader';
 
 // API Configuration (Pulled from previous files)
-const API_BASE_URL = 'http://localhost:8000/api'; 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 // CRITICAL: Simulated router replacement for environment compatibility
 // This simulates the router.push functionality for redirects.

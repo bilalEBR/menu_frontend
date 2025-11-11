@@ -74,13 +74,14 @@ const QRCodeDisplay: React.FC<QRCodeDisplayProps> = ({ value, size = 256 }) => {
  */
 const HotelQRCodeGenerator: React.FC<HotelQRCodeGeneratorProps> = ({ hotelId, onClose }) => {
     // CRITICAL WARNING: THIS MUST BE YOUR PUBLIC, PRODUCTION DOMAIN! 
-    const BASE_DOMAIN = "http://127.0.0.1:8000/api"; 
+    const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+    
 
     // useMemo calculates the URL only when hotelId changes, optimizing performance.
     const menuUrl = useMemo(() => {
         console.log(hotelId);
         // Construct the complete, public URL for the hotel's menu page.
-        return `${BASE_DOMAIN}/hotels/${hotelId}`;
+        return `${API_BASE_URL}/hotels/${hotelId}`;
         
     }, [hotelId]);
 

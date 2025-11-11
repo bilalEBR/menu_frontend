@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 // NOTE: Set your actual API base URL here. 
 // This should point to your Laravel backend's /api endpoint.
-const API_BASE_URL = 'http://127.0.0.1:8000/api'; 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 // Minimal router simulation for environment compatibility (adjust if using next/router)
 const useRouter = () => ({

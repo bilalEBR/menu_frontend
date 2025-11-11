@@ -17,6 +17,7 @@ interface Category {
   id: number;
   hotel_id: number;
   category_name: string;
+  category_image:string;
   created_at: string;
   updated_at: string;
   menu_items: MenuItem[];
@@ -29,7 +30,7 @@ interface Hotel {
   categories: Category[];
 }
 
-const API_BASE_URL = "http://127.0.0.1:8000/api";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export default function HotelDetailPage() {
   const params = useParams();
@@ -116,7 +117,7 @@ export default function HotelDetailPage() {
         </div>
 
         <div className="flex justify-between">
-          <div className="text-xl font-bold">
+          <div className=" mt-1 text-xl font-bold">
             <p>Categories</p>
           </div>
           <div>
@@ -156,13 +157,22 @@ export default function HotelDetailPage() {
                     tabIndex={0}
                     className={`flex-shrink-0 w-45 p-3 rounded-lg text-center transition-all cursor-pointer ${
                       isActive
-                        ? "bg-gray-600 text-white shadow-lg scale-105"
-                        : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                        ? "bg-gray-200 text-gray-800 shadow-lg scale-105"
+                        : "bg-white text-gray-800 hover:bg-gray-200"
                     }`}
                   >
-                    <div className="w-25 h-25 mx-auto mb-1 bg-gray-300 rounded-full flex items-center justify-center text-lg font-bold text-gray-600">
-                      {category.category_name[0].toUpperCase()}
-                    </div>
+
+<div className="w-40 h-25 mx-auto mb-3 rounded-full overflow-hidden shadow-md">
+  <img
+    src={category.category_image}
+    alt={category.category_name}
+    className="w-full h-full object-cover"
+  />
+</div>
+
+
+
+
                     <span className="text-sm font-semibold block">
                       {category.category_name}
                     </span>

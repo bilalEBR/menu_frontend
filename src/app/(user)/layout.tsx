@@ -21,7 +21,8 @@ export default function AuthLayout({
       {/* 3. Centered Content Wrapper (grows to fill space) */}
       {/* This div replaces the old root and handles vertical centering */}
       <main className="min-h-screen bg-gray-50 pt-17">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Added max-w-md for better form width */}
+        <div>
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> Added max-w-md for better form width */}
           {children} {/* Renders user component */}
         </div>
       </main>

@@ -5,7 +5,7 @@ import React, { useState, FormEvent } from 'react';
 // IMPORTANT: In a real-world Next.js application, you would import 
 // { useRouter } from 'next/navigation' (App Router) or 'next/router' (Pages Router).
 // This simulated hook is used to make the component runnable outside a full Next.js environment.
-const API_BASE_URL = 'http://localhost:8000/api'; // Replace with your actual backend API URL
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL; // Replace with your actual backend API URL
 
 // Simulated router for environment compatibility (addresses NextRouter not mounted error)
 const useRouter = () => {
